@@ -1,0 +1,12 @@
+[project]
+name = "locally"
+version = "0.1.0"
+description = "A crowd sourced solution to discovering local services. Users of service can search for local shops that offer certain services like tyre puncture repair, neighborhood garages/mechanics, tuck shops and eateries, plumbing & electrical service person, supplies etc . Users of the service can also update a crowd sourced database of a certain service along with their geo location (latitude and longitude)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.123.3",
+    "alembic==1.17.2",
+    "uvicorn>=0.38.0",
+    "sqlmodel>=0.0.27",
+]
