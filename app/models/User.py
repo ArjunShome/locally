@@ -1,3 +1,7 @@
+"""
+DB table for User
+"""
+
 from sqlmodel import SQLModel, Field, DateTime, Column
 from typing import Optional
 from datetime import datetime

@@ -1,3 +1,7 @@
+"""
+DB table for user booked service
+"""
+
 import uuid
 
 from sqlmodel import SQLModel, Field, Column, DateTime

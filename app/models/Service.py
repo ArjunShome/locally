@@ -1,3 +1,7 @@
+"""
+Model for the Service DB table
+"""
+
 import uuid
 
 from sqlmodel import SQLModel, Field, Column, DateTime

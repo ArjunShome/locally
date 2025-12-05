@@ -1,3 +1,7 @@
+"""
+Endpoints for User APIS
+"""
+
 from fastapi import APIRouter
 
 user_routes = APIRouter()

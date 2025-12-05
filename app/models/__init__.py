@@ -1,3 +1,7 @@
+"""
+Modules for DB models
+"""
+
 from app.models.Service import Service
 from app.models.ServiceType import ServiceType
 from app.models.User import User

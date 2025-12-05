@@ -1,3 +1,7 @@
+"""
+DB table for Service Type table
+"""
+
 from sqlmodel import SQLModel, Field, Column, DateTime
 from typing import Optional
 from datetime import datetime

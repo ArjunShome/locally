@@ -1,3 +1,7 @@
+"""
+Mixins and common code base which can be reutilized
+"""
+
 import uuid
 
 from sqlmodel import Field

@@ -1,3 +1,7 @@
+"""
+Main startup of the Application
+"""
+
 import uvicorn
 
 from fastapi import FastAPI

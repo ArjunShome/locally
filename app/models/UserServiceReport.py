@@ -1,3 +1,7 @@
+"""
+DB Table for user service report
+"""
+
 import uuid
 from datetime import datetime
 from sqlmodel import SQLModel, Field, Column, DateTime
