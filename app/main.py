@@ -24,6 +24,9 @@ app.include_router(user_routes, prefix="/user", tags=["User"])
 
 
 def main():
+    """
+    Main function to start the application
+    """
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
 
 

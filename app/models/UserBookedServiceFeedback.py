@@ -3,14 +3,17 @@ DB Table for user booked service feedback
 """
 
 import uuid
-
-from sqlmodel import SQLModel, Field, Column, DateTime
 from datetime import datetime
 from typing import Optional
+
+from sqlmodel import SQLModel, Field, Column, DateTime
 from app.models.common import IdCreateMixin, utcnow
 
 
 class UserBookedServiceFeedback(SQLModel, IdCreateMixin, table=True):
+    """
+    UserBookedServiceFeedback database table
+    """
     __tablename__ = "user_booked_service_feedback"
     user_booked_service_id: uuid.UUID = Field(default_factory=uuid.uuid4, foreign_key="user_booked_service.id")
     feedback: Optional[str] = None
