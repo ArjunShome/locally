@@ -86,7 +86,7 @@ def upgrade() -> None:
     sa.Column('id', sa.Uuid(), nullable=False),
     sa.Column('user_id', sa.Uuid(), nullable=False),
     sa.Column('service_id', sa.Uuid(), nullable=False),
-    sa.Column('serice_status', 
+    sa.Column('serice_status',
               sa.Enum(
                   'Booked', 'Accepted', 'Rejected', 'Inprogress', 'Completed', 
                   name='servicestatustype'
