@@ -5,11 +5,14 @@ Revises:
 Create Date: 2025-12-04 16:52:05.878772
 
 """
-from typing import Sequence, Union
 
-from alembic import op
+# pylint: disable=invalid-name
+# pylint: disable=no-member
+from typing import Sequence, Union
 import sqlalchemy as sa
 import sqlmodel
+
+from alembic import op
 
 
 # revision identifiers, used by Alembic.
