@@ -12,4 +12,3 @@ class ServiceStatusType(Enum):
     ACCEPTED = "Accepted"
     INPROGRESS = "Inprogress"
     COMPLETED = "Completed"
-
