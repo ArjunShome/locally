@@ -1,5 +1,5 @@
 """
-Model for the Service DB table
+Model for the Service DB table 
 """
 
 import uuid
