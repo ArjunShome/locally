@@ -7,3 +7,4 @@ user_routes = APIRouter()
 @user_routes.get("/ping")
 async def ping():
     return {"message": "pong"}
+
