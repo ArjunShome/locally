@@ -9,10 +9,13 @@ from datetime import datetime, timezone
 from sqlmodel import Field
 
 def utcnow():
+    """
+    UDF for getting utcnow time
+    """
     return datetime.now(timezone.utc)
 
 # Base Model
-class IdCreateMixin:
+class IdCreateMixin:  # pylint: disable=too-few-public-methods
     """
     Docstring for IdCreateMixin mixin class
     """

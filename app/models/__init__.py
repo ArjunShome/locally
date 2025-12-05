@@ -3,8 +3,8 @@ Modules for DB models
 """
 
 from app.models.Service import Service
-from app.models.ServiceType import ServiceType
+from Repository.backend.locally.app.models.service_type import ServiceType
 from app.models.User import User
-from app.models.UserBookedService import UserBookedService
-from app.models.UserBookedServiceFeedback import UserBookedServiceFeedback
-from app.models.UserServiceReport import UserServiceReport
+from Repository.backend.locally.app.models.user_booked_service import UserBookedService
+from Repository.backend.locally.app.models.user_booked_service_feedback import UserBookedServiceFeedback
+from Repository.backend.locally.app.models.user_service_report import UserServiceReport
