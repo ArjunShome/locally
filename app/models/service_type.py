@@ -1,10 +1,18 @@
-from sqlmodel import SQLModel, Field, Column, DateTime
+"""
+DB table for Service Type table
+"""
+
 from typing import Optional
 from datetime import datetime
+
+from sqlmodel import SQLModel, Field, Column, DateTime
 
 from app.models.common import IdCreateMixin, utcnow
 
 class ServiceType(SQLModel, IdCreateMixin, table=True):
+    """
+    ServiceType table for Database
+    """
     __tablename__ = "service_type"
     service_type_name: str = Field(unique=True, index=True)
     service_type_description: Optional[str] = None

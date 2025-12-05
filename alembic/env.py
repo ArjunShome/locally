@@ -1,3 +1,7 @@
+"""
+Alembic environment configuration
+"""
+# pylint: disable=no-member
 import os
 from logging.config import fileConfig
 from dotenv import load_dotenv

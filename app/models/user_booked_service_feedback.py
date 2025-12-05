@@ -1,14 +1,24 @@
-import uuid
+"""
+DB Table for user booked service feedback
+"""
 
-from sqlmodel import SQLModel, Field, Column, DateTime
+import uuid
 from datetime import datetime
 from typing import Optional
+
+from sqlmodel import SQLModel, Field, Column, DateTime
 from app.models.common import IdCreateMixin, utcnow
 
 
 class UserBookedServiceFeedback(SQLModel, IdCreateMixin, table=True):
+    """
+    UserBookedServiceFeedback database table
+    """
     __tablename__ = "user_booked_service_feedback"
-    user_booked_service_id: uuid.UUID = Field(default_factory=uuid.uuid4, foreign_key="user_booked_service.id")
+    user_booked_service_id: uuid.UUID = Field(
+        default_factory=uuid.uuid4,
+        foreign_key="user_booked_service.id"
+        )
     feedback: Optional[str] = None
     rating: int = Field(gt=0, lt=6)
     update_date: datetime = Field(

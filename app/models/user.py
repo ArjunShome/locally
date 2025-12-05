@@ -1,12 +1,19 @@
-from sqlmodel import SQLModel, Field, DateTime, Column
+"""
+DB table for User
+"""
 from typing import Optional
 from datetime import datetime
+
+from sqlmodel import SQLModel, Field, DateTime, Column
 
 from app.models.common import IdCreateMixin, utcnow
 
 # User table
 
 class User(SQLModel, IdCreateMixin, table=True):
+    """
+    User DB table definition
+    """
     __tablename__ = "user"
     first_name: str
     last_name: str

@@ -1,15 +1,22 @@
-import uuid
+"""
+Model for the Service DB table 
+"""
 
-from sqlmodel import SQLModel, Field, Column, DateTime
+import uuid
 from typing import Optional
 from datetime import datetime
+
+from sqlmodel import SQLModel, Field, Column, DateTime
 
 from app.models.common import IdCreateMixin, utcnow
 
 class Service(SQLModel, IdCreateMixin, table=True):
+    """
+    Service Table in Database
+    """
     __tablename__ = "service"
     owner_id: uuid.UUID = Field(default_factory=uuid.uuid4, foreign_key="user.id")
-    service_type_id: uuid.UUID = Field(default_factory=uuid.uuid4, foreign_key="service_type.id")    
+    service_type_id: uuid.UUID = Field(default_factory=uuid.uuid4, foreign_key="service_type.id")
     service_name: str = Field(unique=True, index=True)
     service_description: Optional[str] = None
     service_contact_number: Optional[int] = None

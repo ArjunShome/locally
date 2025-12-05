@@ -1,3 +1,8 @@
+"""
+DB base modules and imports for Sqlmodel context and metadata
+"""
+# pylint: disable=unused-import
+
 from sqlmodel import SQLModel
 
 from app.models import Service
