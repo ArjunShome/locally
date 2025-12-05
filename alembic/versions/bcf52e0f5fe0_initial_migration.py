@@ -39,7 +39,6 @@ def upgrade() -> None:
         unique=True
         )
     
-    
     op.create_table('user',
     sa.Column('id', sa.Uuid(), nullable=False),
     sa.Column('first_name', sqlmodel.sql.sqltypes.AutoString(), nullable=False),
@@ -57,7 +56,6 @@ def upgrade() -> None:
     op.create_index(op.f('ix_user_email'), 'user', ['email'], unique=True)
     op.create_index(op.f('ix_user_id'), 'user', ['id'], unique=False)
     op.create_index(op.f('ix_user_username'), 'user', ['username'], unique=True)
-    
     
     op.create_table('service',
     sa.Column('id', sa.Uuid(), nullable=False),
@@ -81,7 +79,6 @@ def upgrade() -> None:
     op.create_index(op.f('ix_service_id'), 'service', ['id'], unique=False)
     op.create_index(op.f('ix_service_service_name'), 'service', ['service_name'], unique=True)
     
-    
     op.create_table('user_booked_service',
     sa.Column('id', sa.Uuid(), nullable=False),
     sa.Column('user_id', sa.Uuid(), nullable=False),
@@ -99,7 +96,6 @@ def upgrade() -> None:
     )
     op.create_index(op.f('ix_user_booked_service_id'), 'user_booked_service', ['id'], unique=False)
     
-    
     op.create_table('user_service_report',
     sa.Column('id', sa.Uuid(), nullable=False),
     sa.Column('user_id', sa.Uuid(), nullable=False),
@@ -112,7 +108,6 @@ def upgrade() -> None:
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_user_service_report_id'), 'user_service_report', ['id'], unique=False)
-    
     
     op.create_table('user_booked_service_feedback',
     sa.Column('id', sa.Uuid(), nullable=False),
