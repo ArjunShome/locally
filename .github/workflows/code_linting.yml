@@ -22,6 +22,9 @@ jobs:
       - name: Generate Requirements
         run: |
           uv pip compile pyproject.toml > requirements.txt
+      - name: Create virtual environment
+        run: |
+          uv venv
       - name: Install dependencies
         run: |
           uv pip install -r requirements.txt
